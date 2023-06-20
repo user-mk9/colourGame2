@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Color Guess</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    li {
+      display: inline;
+    }
+    </style>
+
+</head>
+
+<body>
+
+
+  <div class="ui grid container">
+    <div class="ui sixteen wide left aligned column ">
+      <div class= "ui raised segment">
+        <nav>
+          
+            <ul>
+                <li><a href="guessinggame.html">Home</a></li>
+                 <li><a href="about.html">About</a></li>
+                 <li><a href="contact.html">Contact</a></li>
+              </ul>
+        
+        </nav><hr>
+      </div>
+
+      <h1>Guessing Game <br><span class="cnotice" id="notice">Pick The Tile Color That Matches The Word That Pops Up</span></h1>
+
+      <img src="images/correct.png" alt="" id="checkmark">
+      <img src="images/incorrect.png" alt="" id="wrong">
+
+      <div class="start">
+        <button class="newColor" id="play">New Game</button>
+        <button class="resetGame" id="reset">Reset Game</button>
+        <span class="status1" id= "status1">Let's Play!</span>
+      </div>
+
+      <form id="playerName" class="ui form">
+        <label class= "p1color" for="plName">Player Name: </label>
+        <input type="text" name="plName" id="plName" required>
+        <button type="submit">Submit</button>
+      </form>
+
+      <br><p class="q1">Question: <span id="number1"> 0 </span></p>
+
+      <button class="nextColor big ui arrow right labeled icon button " id="next">
+        <i class="right arrow icon"></i>
+        Next
+      </button>
+
+
+      <table class="brd ui raised segment">
+        <thead>
+          <th>Player</th>
+          <th>Score</th>
+        </thead>
+        <tr>
+          <td id="player"></td>
+          <td><span id="score">0</span></td>
+        </tr>
+      </table>
+
+      
+      <div class="column msgBox">
+        <div class="ui segment">
+          <div class="ui info message">
+            
+            <div class="header">
+             <i class="info circle icon"></i> Steps to Follow
+            <button id="btn1">View</button></div>
+            
+            <div id="more1">
+            <ol class="ui ordered list">
+              <li>Enter Player Name and Submit</li>
+              <li>Click 'New Game' To Start</li>
+              <li>Click 'Next' For New Colour (Question)</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="first">
+        <div id="color1" class="colorText color1"></div>
+
+        <div id="color2" class="colorText color2"></div>
+      </div>
+
+      <div class="mainBox">
+        <div class="row">
+          <div id="Blue" class="color blue"></div>
+          <div id="Red" class="color red"></div>
+        </div>
+
+        <div class="row">
+          <div id="Green" class="color green"></div>
+          <div id="Yellow" class="color yellow"></div>
+        </div>
+      </div>
+
+
+      <span id="correct"></span>
+      <span id="time"></span>
+
+    </div>
+  </div>
+
+
+  
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    new Darkmode({ label: '🌓',   bottom: '64px',
+  right: 'unset',
+  left: '32px'}).showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,248 @@
+h1{
+    text-align: center;
+    background-color: gray;
+}
+
+body{
+    margin: auto;
+    background-color: azure;
+}
+
+.mainBox{
+    display: flex;
+    margin-left: 37%;
+    position: absolute;
+    top: 278px;
+}
+
+.color{
+    width: 150px;
+    height: 150px;
+}
+
+.color:hover{
+    transform: scale(0.9);
+}
+
+.blue{
+    background-color: blue;
+}
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.first{
+    margin-top: 0em;
+    width: 150px;
+    height: 100px;
+    display: grid;
+    text-align: center;
+}
+
+.colorText{
+    font: 5em sans-serif; 
+    display: none;
+    text-align: center;
+}
+
+.darkmode--activated .colorText{
+    color: #fff;
+  }
+
+  .darkmode--activated .q1{
+    color: #fff;
+  }
+
+  .darkmode--activated .number1{
+    color: #fff;
+  }
+
+  .darkmode--activated .p1color {
+    color: #fff;
+  }
+
+  .darkmode--activated #time {
+    color: #fff;
+  }
+
+
+#time{
+    position: absolute;
+   bottom: 20px;
+   left: 210px;
+    text-align: center;
+    width: 300px;
+    font: 3rem sans-serif; 
+}
+
+#correct{
+    position: absolute;
+    color: lawngreen;
+    text-shadow: 0px 0px 10px black;
+    font: 3rem sans-serif; 
+}
+
+#checkmark, #wrong{
+    pointer-events: none;
+    position: absolute;
+    width: 10%;
+    left: 45%;
+    top: 10%;
+    opacity: 0;
+}
+
+    #checkmark, #wrong{
+        position: absolute;
+        width: 50%;
+        left: 25%;
+        top: 10%;
+    }
+
+
+.fadeAway{
+    animation: fadeAway 500ms;
+}
+@keyframes fadeAway{
+    0%{opacity: 1}
+    50%{opacity: 1}
+    100%{opacity: 0}
+}
+
+.clear{
+    color:white
+}
+
+
+.newColor{
+    font-size: 1rem;
+    height: 100px;
+    padding: 0.5rem 2rem 0, .5rem;
+    border: 3px solid black;
+    border-radius: 0.3rem;
+    margin: 1rem, 0, 0;
+    margin-right: .1;
+    float: left;
+    width: 60px;
+    height: 50px;
+}
+
+.newColor{
+    background-color: lightgreen;
+}
+
+.newColor:hover{
+    background-color: yellow; 
+}
+
+
+.resetGame{
+    font-size: 1rem;
+    height: 100px;
+    padding: 0.5rem, 0, 0rem, 0.5rem;
+    border: 3px solid black;
+    border-radius: 0.3rem;
+    float: right;
+    width: 60px;
+    height: 50px;
+}
+
+.resetGame{
+    background-color: lightgreen;
+}
+
+.resetGame:hover{
+    background-color: yellow; 
+}
+
+.start {
+    height: 40px;
+    text-align: center;
+    background-color: grey;
+    padding: 0;
+}
+
+
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #aaa;
+    padding: 5px;
+    text-align: left;
+}
+
+
+.brd{
+    margin-left: 960px;
+}
+
+
+.segment{
+    float: right;
+}
+
+
+.ui.form{
+    padding: 1rem;
+}
+
+
+.cnotice{
+    color: yellow;
+}
+
+.crnotice{
+    color:red;
+}
+
+.msgBox{
+    position: absolute;
+    top: 420px;
+    left: 820px;
+}
+
+
+#more1 {
+    display: none;
+    margin-top: 1em;    
+  }
+
+  #btn1
+  {
+      border-radius: 85%;
+  }
+
+  #gallery {
+	width: 85px;
+	padding: 0 20px 30px 10px;
+	border-right: 1px dotted #5C7B7B;
+	display:none;
+}
+
+#gallery a {
+	padding:5px 5px 3px 5px;
+	display: block;
+	border: 1px solid #666;
+	margin: 0 10px 8px 0;
+	width: 70px;
+}
+
+#gallery img {
+	border: 1px solid #666;
+}
+
+.trigger {
+    text-decoration:underline;
+    cursor:pointer;
+}

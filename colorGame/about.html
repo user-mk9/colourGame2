@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>About</title>
+  <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" rel = "stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+  
+  <style>
+    #navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .navbarls {
+      display: inline;
+    }
+
+    #cntr{
+
+      margin-left: 15%;
+    }
+
+    h1{
+      background-color: white;
+      text-align: center;
+    }
+    </style>
+
+</head>
+
+<body>
+
+
+  <div class= "ui raised segment">
+    <nav>
+      
+        <ul id="navbar">
+            <li class="navbarls"><a href="guessinggame.html">Home</a></li>
+             <li class="navbarls"><a href="about.html">About</a></li>
+             <li class="navbarls"><a href="contact.html">Contact</a></li>
+          </ul>
+    
+    </nav><hr>
+</div>
+<h1>About</h1>
+<br><br><br><br><br><br>
+
+
+<div class="ui grid">
+<div class="ui raised segment twelve wide column" id="cntr">
+<p>This plugin (darkmode.js) is very good anad easy to use, it saves a developer from having to actaully write
+  the code in order to perform a darkmode feature. This is just a shortcut use darkmode.
+</p>
+<p>For this application there is widget which I toggled on</p>
+<p>Saving user choice</p>
+<p>CSS can be applied to ths plugin:</p>
+
+<ul>
+  <li>Designing the widget to activate and/or deactivate darkmode</li>
+  <li>Designing the look of the widget</li>
+  <li>"darkmode--activated" can be used to switch or change specific elements when darkmode is activated</li>
+  <li>"darkmode-ignore" can be used to where you don't want to apply darkmode, you can also use 
+    "isolation: isolate;" to do the same
+  </li>
+  <li>"mix-blend-mode: difference;" is useed to revert the dark-mode with this style</li>
+</ul>
+
+
+</div>
+</div>
+     
+   
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+        </script>
+      <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.js"></script>
+      
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    new Darkmode({ label: '🌓',   bottom: '64px',
+  right: 'unset',
+  left: '32px'}).showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+    
+
+</body>
+</html>

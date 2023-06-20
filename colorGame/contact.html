@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>About</title>
+  <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" rel = "stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+  
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    li {
+      display: inline;
+    }
+
+    h1{
+        background-color: #fff;
+        text-align: center;
+    }
+
+
+    body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+    </style>
+
+</head>
+
+<body>
+
+    <div class= "ui raised segment">
+    <nav>
+      
+        <ul>
+            <li><a href="guessinggame.html">Home</a></li>
+             <li><a href="about.html">About</a></li>
+             <li><a href="contact.html">Contact</a></li>
+          </ul>
+    
+    </nav><hr>
+</div>
+
+<h1>Contact Us</h1>
+
+<div class="ui segment">
+
+    <script id="handlebars-demo" type="text/x-handlebars-template">
+        <div>
+            {{#each Examples}}
+          <h1>{{FormExample}}</h1>
+          <p>{{Contact}}</p>
+          <p>{{Telephone}}</p>
+          <p>{{Email}}</p>
+          <p>{{Enquiry}}</p>
+          <p>{{Details}}</p>
+          {{/each}}
+        </div>
+        </script>
+
+        
+
+
+    <form id="contact" class="ui form">
+       
+        <div class = "inline field">
+        <label for= "contactname" class= "three wide field">Contact Name: </label>
+        <input type="text" name="contactname" id="contactname" class="eight wide field" autofocus required pattern = "[A-Z][a-z]+( [A-Z][a-z]+)*">
+        </div>
+
+        <div class = "inline field">
+            <label for= "telephone" class= "three wide field">Telephone Number: </label>
+            <input type="tel" name="telephone" id="telephone" class="eight wide field"  required pattern = "^(\(\d{3}\)|\d{3})-?\d{6,}$">
+        </div>
+        
+        <div class = "inline field">
+            <label for= "email" class= "ui three wide field">Email Address: </label>
+            <input type="tel" name="email" id="email" class="ui eight wide field"  required  pattern = "^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$">
+        </div>
+
+        <div class = "inline field">
+            <label for="enquiry" class="ui three wide field">Type of Enquiry</label>
+             <select name="region" id="region" class="ui eight wide field" >
+                 <option value ="What picture sizes are offered?">What picture sizes are offered?</option>
+                 <option value ="Does it come in a frame?">Does it come in a frame?</option>
+                 <option value ="Other">Other</option>
+             </select>
+         </div>
+
+         <p>Please provide details of your enquiry. Please provide full description which 
+             would be of help to us to provide you with accurate information</p>
+             
+
+         <div class = "inline field">
+            <label for="details" class="ui three wide field">Provide Detailed Enquiry</label>
+            <textarea name="details" id="details" cols="30" rows="7"  class="ui twelve wide field"></textarea>
+          </div>
+        
+        
+        
+        
+        <button type="submit" id="myBtn">Submit</button>
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Enquiry has been Submitted</p>
+            </div>
+
+        </div>
+      </form>
+    
+    <span data-fancybox-trigger="gallery1" class="trigger"
+    >Click Here To See Examples of Our Pictures</span>
+</div> 
+    <div id="gallery" >
+  
+        <a href="images/large/Shades_of_blue.png" data-caption = "Blue" data-fancybox= "gallery1"><img src="images/small/Shades_of_blue.png" width="70" height="70" alt="Blue"></a>
+        <a href="images/large/Shades-of-green.webp"data-caption = "Green" data-fancybox= "gallery1"> <img src="images/small/Shades-of-green.webp" width="70" height="70" alt="Yellow"/ </a>
+        <a href="images/large/Shades_of_red.png" data-caption = "Red" data-fancybox= "gallery1"><img src="images/small/Shades_of_red.png" width="70" height="70" alt="Green"/ </a>
+        <a href="images/large/Shades_of_yellow.png" data-caption = "Yellow" data-fancybox= "gallery1"><img src="images/small/Shades_of_yellow.png" width="70" height="70" alt="Orange"></a>
+        
+      </div>
+
+     
+     
+
+
+
+        
+      
+      
+      </script>
+      
+      
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.js"></script>
+      
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script src="js/rollover.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    new Darkmode({ label: '🌓',   bottom: '64px',
+  right: 'unset',
+  left: '32px'}).showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+<script>
+    const form = document.querySelector('form')
+
+form.addEventListener('submit', (evt) => {
+ evt.preventDefault()
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+})
+
+$(document).ready(function() {
+
+const formeg = {
+ FormExample: 'Yummy Chicken Noodle Soup',
+ Examples: [
+   {  Contact: "Contact Name: Jim",
+ Telephone: "Telephone Number: 0873637282",
+ Email: "Email Address: jim087@mail.com",
+ Enquiry: "Type of Enquiry: What picture sizes are offered?",
+ Details: "Provide Detail Enquiry: "},
+ 
+ {  Contact: "Contact Name: Chloe",
+ Telephone: "Telephone Number: 0873637282",
+ Email: "Email Address: chloem@mail.com",
+ Enquiry: "Type of Enquiry: Other",
+ Details: "Provide Detail Enquiry: I would like to have a customised frame..."}
+ ]
+}
+
+
+let template = Handlebars.compile($('#handlebars-demo').html())
+
+let thecontent = template(formeg)
+
+$(document.body).append(thecontent)
+
+})
+
+
+    
+</script>
+
+</body>
+</html>
